@@ -1,0 +1,9 @@
+import React from "react"
+
+export default function CancelIcon() {
+   return <svg className="cancel-icon" width="30" height="30" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+   <rect width="50" height="50" fill="black"/>
+   <path d="M25 4.16669C13.4792 4.16669 4.16667 13.4792 4.16667 25C4.16667 36.5209 13.4792 45.8334 25 45.8334C36.5208 45.8334 45.8333 36.5209 45.8333 25C45.8333 13.4792 36.5208 4.16669 25 4.16669ZM35.4167 32.4792L32.4792 35.4167L25 27.9375L17.5208 35.4167L14.5833 32.4792L22.0625 25L14.5833 17.5209L17.5208 14.5834L25 22.0625L32.4792 14.5834L35.4167 17.5209L27.9375 25L35.4167 32.4792Z" fill="#E7A422"/>
+   </svg>
+   
+}

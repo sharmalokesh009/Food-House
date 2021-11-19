@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.orders-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.orders-container h1 {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #e7a422;
+          text-decoration-color: #e7a422;
+}
+
+.orders-container h1 p {
+  font-size: 16px;
+  border-radius: 50%;
+  background-color: red;
+  width: 25px;
+  text-decoration: none;
+  height: 25px;
+  color: white;
+  font-weight: bolder;
+}
+
+.orders-container .noorder {
+  margin-top: 200px;
+  text-decoration: none;
+  color: #c90e0e;
+}
+
+.orders-container .today-orders {
+  margin-top: 50px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto auto;
+      grid-template-columns: auto auto auto auto;
+  row-gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+}
+
+.orders-container .today-orders .order {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  border-radius: 5px;
+  width: 250px;
+  height: 350px;
+  background-color: black;
+  line-height: 1.5;
+}
+
+.orders-container .today-orders .order .orderidtitle {
+  font-weight: bold;
+  color: #e7a422;
+}
+
+.orders-container .today-orders .order .id {
+  color: white;
+}
+
+.orders-container .today-orders .order #item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 16px;
+}
+
+.orders-container .today-orders .order a {
+  color: lightgreen;
+}
+
+.orders-container .today-orders .order button {
+  padding: 5px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  margin-top: 10px;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+}
+
+.orders-container .today-orders .order button:hover {
+  cursor: pointer;
+}
+
+.orders-container .today-orders .order .delete {
+  background-color: #ad1919;
+  color: white;
+}
+
+.orders-container .today-orders .order input {
+  height: 50px;
+  width: 200px;
+  text-align: center;
+  border: none;
+  outline: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bolder;
+  -webkit-box-shadow: 0 0 10px #e7a422;
+          box-shadow: 0 0 10px #e7a422;
+}
+
+.orders-container .today-orders .order .cancelicon {
+  background-color: black;
+}
+
+.orders-container .today-orders .order .cancelicon:hover {
+  cursor: pointer;
+}
+
+.orders-container .today-orders .order .vieworder {
+  color: white;
+  text-decoration: underline;
+}
+
+.orders-container .today-orders .order .vieworder:hover {
+  cursor: pointer;
+}
+
+.loadingicon-container div {
+  height: 30px;
+  width: 30px;
+  border-top: 2px solid #e7a422;
+  -webkit-animation: loading 1s linear infinite;
+          animation: loading 1s linear infinite;
+  border-radius: 50%;
+}
+
+@-webkit-keyframes loading {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes loading {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .orders-container .today-orders {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
