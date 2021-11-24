@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 export default function PrivacyPolicy(){
     document.querySelector("body").style.backgroundColor = "white"
     return <div className="privacypolicy-container">
-        <Navbar color="black" account="none" columns="auto auto" />
+        <Navbar color="black"  logout="none" columns="auto auto" />
          <h2 style={{textAlign:"center"}}><b>PRIVACY POLICY</b></h2>
          <br/>
     <p>Effective date: 2021-11-11</p>

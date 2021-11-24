@@ -109,7 +109,7 @@ const navigate = useNavigate();
 
   return (
     <div className="forgotpassword-container">
-      <Navbar color="black" columns="auto auto " credentials={false} account="none" />
+      <Navbar color="black" columns="auto auto " credentials={false}  logout="none" />
       <br />
       <Logo />
       <br />

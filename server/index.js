@@ -20,9 +20,9 @@ app.use(
     origin: [
       "http://localhost:3000",
       "http://localhost:3001",
-      "https://food-house-bb357.web.app",
+      "https://foodhouseweb.herokuapp.com",
       "https://foodhouseapp.herokuapp.com",
-      "https://food-house-admin.herokuapp.com"
+      "https://fhadmin.herokuapp.com"
     ],
     methods: ["GET", "POST"],
     credentials: true,
@@ -69,11 +69,15 @@ const TodayOrdersSchema = new mongoose.Schema({
 
 const Users = mongoose.model("Users", UsersSchema);
 const Burgers = mongoose.model("Burgers", FoodSchema);
+const Wraps = mongoose.model("Wraps", FoodSchema);
+const Sandwich = mongoose.model("Sandwiches", FoodSchema);
+const Pizza = mongoose.model("Pizzas", FoodSchema);
+const Pasta = mongoose.model("Pastas", FoodSchema);
+const Drinks = mongoose.model("Drinks", FoodSchema);
 const TodayOrders = mongoose.model("TodayOrders" , TodayOrdersSchema)
 
 app.get("/", (req, res) => {
-  res.send("hello");
-  console.log(process.env.URL);
+  res.send("Food House");
 });
 app.post("/signup", (req, res) => {
   console.log(req.body);
@@ -207,6 +211,7 @@ app.post("/changepassword", (req, res) => {
 });
 
 app.get("/burgers", (req, res) => {
+ 
   Burgers.find({}, (err, burgers) => {
     if (err) {
       console.log(err);
@@ -215,7 +220,56 @@ app.get("/burgers", (req, res) => {
     }
   });
 });
-
+app.get("/wraps", (req, res) => {
+ 
+  Wraps.find({}, (err, wraps) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.send(wraps);
+    }
+  });
+});
+app.get("/sandwiches", (req, res) => {
+ 
+  Sandwich.find({}, (err, sandwiches) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.send(sandwiches);
+    }
+  });
+});
+app.get("/pizzas", (req, res) => {
+ 
+  Pizza.find({}, (err, pizzas) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.send(pizzas);
+    }
+  });
+});
+app.get("/pastas", (req, res) => {
+ 
+  Pasta.find({}, (err, pastas) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.send(pastas);
+    }
+  });
+});
+app.get("/drinks", (req, res) => {
+ 
+  Drinks.find({}, (err, drinks) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.send(drinks);
+    }
+  });
+});
 app.post("/orders", (req, res) => {
   const items = req.body;
   const cookietitles = Object.keys(req.cookies);

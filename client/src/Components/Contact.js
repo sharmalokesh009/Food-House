@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 export default function Contact(){
     document.querySelector("body").style.backgroundColor = "White"
     return <div className="contact-container">
-        <Navbar color="black" account="none" columns="auto auto " />
+        <Navbar color="black" columns="auto auto " logout="none" />
         <br/><br/>
         <p className="haveanyquery" >Have any Query ? </p>
         <br/>

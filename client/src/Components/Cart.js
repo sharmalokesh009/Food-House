@@ -168,7 +168,7 @@ export default function Cart() {
   }
   return (
     <div className="confirm-orders-container">
-      <Navbar color="black" credentials={true} />
+      <Navbar color="black" credentials={true}  columns="auto auto auto auto" />
       {paid ? (
         <OrderPlaced
           orderid={currentorderid}

@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 export default function TermsandConditions(){
     document.querySelector("body").style.backgroundColor = "white"
     return <div className="privacypolicy-container">
-<Navbar color="black" account="none" columns="auto auto" />
+<Navbar color="black"  logout="none" columns="auto auto" />
 <h2 style={{textAlign:"center"}}><b>TERMS AND CONDITIONS</b></h2>
 <p>Last updated: 2021-11-11</p>
 <br/>

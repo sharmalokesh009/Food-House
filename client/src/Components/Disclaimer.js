@@ -5,7 +5,7 @@ export default function Disclaimer() {
     document.querySelector("body").style.backgroundColor = "white"
   return (
     <div className="privacypolicy-container">
-        <Navbar color="black" account="none" columns="auto auto" />
+        <Navbar color="black"  columns="auto auto" logout="none" />
       <h2 style={{ textAlign: "center" }}>
         <b>DISCLAIMER</b>
       </h2>

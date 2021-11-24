@@ -51,7 +51,7 @@ export default function TrackOrder(props) {
 
   return (
     <div className="trackorder-container">
-      <Navbar color="black" credentials={true} />
+      <Navbar color="black" credentials={true}   columns="auto auto auto auto" />
 
       <h1>Track your Order</h1>
       <br />

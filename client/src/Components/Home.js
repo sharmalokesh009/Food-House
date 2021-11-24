@@ -33,44 +33,46 @@ export default function Home() {
   return (
   
       <div className="home-container">
-        <Navbar color="black" credentials={true}/>
+        <Navbar color="black" credentials={true} columns="auto auto auto auto"/>
         <div className="categories-container">
-          <div>
+          
+          <div onClick={() => {navigate('/burgers')}}>
             <img
               src={process.env.PUBLIC_URL + "/photos/burger.png"}
               alt="burger"
             />
-            <Link to="/food" >BURGER</Link>
+            <Link to="/burgers" >BURGER</Link>
           </div>
-          <div>
+          
+          <div onClick={() => {navigate('/wraps')}}>
             <img
               src={process.env.PUBLIC_URL + "/photos/wrap.png"}
               alt="wraps"
             />
             <Link to="/wraps">WRAPS</Link>
           </div>
-          <div>
+          <div onClick={() => {navigate('/sandwiches')}}>
             <img
               src={process.env.PUBLIC_URL + "/photos/sandwich.png"}
               alt="sandwich"
             />
-            <Link to="/sandwich">SANDWICH</Link>
+            <Link to="/sandwiches">SANDWICH</Link>
           </div>
-          <div>
+          <div onClick={() => {navigate('/pizzas')}}>
             <img
               src={process.env.PUBLIC_URL + "/photos/pizza.png"}
               alt="pizza"
             />
-            <Link to="/pizza">PIZZA</Link>
+            <Link to="/pizzas">PIZZA</Link>
           </div>
-          <div>
+          <div onClick={() => {navigate('/pastas')}}>
             <img
               src={process.env.PUBLIC_URL + "/photos/pasta.png"}
               alt="pasta"
             />
-            <Link to="/pasta">PASTA</Link>
+            <Link to="/pastas">PASTA</Link>
           </div>
-          <div>
+          <div onClick={() => {navigate('/drinks')}}>
             <img
               src={process.env.PUBLIC_URL + "/photos/drinks.png"}
               alt="drinks"

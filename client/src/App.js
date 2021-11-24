@@ -31,7 +31,12 @@ export default function App() {
           <Route path='/forgot' element={<ForgotPassword />} />
           <Route path='/otp' element={ <Form login={true} signup={false} otp={true} />} />
           <Route path='/home' element={<Home />} />
-          <Route path='/food' element={<Foodbycategory />} />
+          <Route path='/burgers' element={<Foodbycategory food="burgers" title="Burgers"/>} />
+          <Route path='/wraps' element={<Foodbycategory food="wraps" title="Wraps"/>} />
+          <Route path='/sandwiches' element={<Foodbycategory food="sandwiches" title="Sandwich"/>} />
+          <Route path='/pizzas' element={<Foodbycategory food="pizzas" title="Pizza"/>} />
+          <Route path='/pastas' element={<Foodbycategory food="pastas" title="Pasta"/>} />
+          <Route path='/drinks' element={<Foodbycategory food="drinks" title="Drinks"/>} />
           <Route path='/cart' element={<Cart />} />
           <Route path='/support' element={<Contact />} />
           <Route path='/privacy' element={<PrivacyPolicy />} />

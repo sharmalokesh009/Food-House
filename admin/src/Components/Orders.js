@@ -183,18 +183,22 @@ export default function Orders() {
                 <div
                   className="order"
                   id={`${index}item`}
-                  style={{ display: "none" }}
+                  style={{ display: "none"}}
                 >
+                  <div style={{height:"200px",overflow:"scroll" }}>
                   {order.Order.map((item, index) => {
                     return (
+                      
                       <p key={index} className="id" id="item">
                         {item.Name} &nbsp;
                         <p
                           style={{ color: "#e7a422" }}
                         >{`(${item.Quantity})`}</p>
                       </p>
+                     
                     );
                   })}
+                   </div>
                   <button
                     className="cancelicon"
                     onClick={() => {

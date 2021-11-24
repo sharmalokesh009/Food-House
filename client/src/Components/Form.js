@@ -112,7 +112,7 @@ export default function Form(props) {
       
         if (res.data === "Inserted") {
           dispatch({ type: "signuploadingfalse" });
-         
+         navigate('/home')
         } else {
           alert("Account exists");
           dispatch({ type: "signuploadingfalse" });
@@ -267,9 +267,9 @@ export default function Form(props) {
       <div className="form-container">
         <Navbar
           color="white"
-          columns="auto auto "
+          columns="auto"
           credentials={credentials ? false : true}
-          account="none"
+         logout="none"
         />
         <br />
         <br />

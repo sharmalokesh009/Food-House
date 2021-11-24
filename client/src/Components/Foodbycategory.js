@@ -7,7 +7,7 @@ import {  useNavigate } from "react-router-dom";
 import LoadingIcon from "../Icons/Loading";
 import { backendurl } from "../url";
 
-export default function Foodbycategory() {
+export default function Foodbycategory(props) {
   document.querySelector("body").style.backgroundColor = "white";
   const navigate = useNavigate();
   const [foods, setfoods] = useState([]);
@@ -30,7 +30,7 @@ export default function Foodbycategory() {
   },[navigate]);
   const fetchdata = async () => {
     setdataparsed(true);
-    await axios.get(`${backendurl.url}burgers`).then((res) => {
+    await axios.get(`${backendurl.url}${props.food}`).then((res) => {
       setfoods(res.data);
       setdataparsed(false);
     });
@@ -97,8 +97,8 @@ export default function Foodbycategory() {
   return (
   
       <div className="foodbycategory-container">
-        <Navbar color="black" credentials={true} />
-        <p className="food-title">Burgers</p>
+        <Navbar color="black" credentials={true} columns="auto auto auto auto" />
+        <p className="food-title">{props.title}</p>
         <br />
         {dataparsed ? (
           <LoadingIcon width="100px" height="100px" margintop="100px"  />
@@ -155,7 +155,7 @@ export default function Foodbycategory() {
           </div>
         )}
         <button onClick={handlesubmit}>
-          {loading ? <LoadingIcon /> : "Go to Cart"}
+          {loading ? <LoadingIcon /> : "Add to Cart"}
         </button>
       </div>
     

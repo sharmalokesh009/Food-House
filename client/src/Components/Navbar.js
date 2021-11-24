@@ -78,17 +78,15 @@ export default function Navbar(props) {
             <Link style={{ color: props.color }} to="/support">
               Contact
             </Link>
-            <Link style={{ color: props.color }} to="/">
-              About
+            <Link style={{display: props.logout, color: props.color }} to="/home">
+              Home
             </Link>
-            <Link style={{ color: props.color, display: props.account }} to="/">
-              Account
-            </Link>
+            <Link style={{display: props.logout,color: props.color}} to="/cart">Cart</Link>
             <p
               onClick={handlelogout}
               style={{
                 color: "black",
-                display: props.account,
+                display: props.logout,
                 textDecoration: "underline",
               }}
             >
@@ -116,15 +114,14 @@ export default function Navbar(props) {
         <div className="links" ref={navref}>
           <Link to="/">Food House</Link>
           <Link to="/support">Contact</Link>
-          <Link to="/">About</Link>
-          <Link to="/" style={{ display: props.account }}>
-            Account
-          </Link>
+          <Link to="/home">Home</Link>
+          <Link style={{display: props.logout}} to="/cart">Cart</Link>
+         
           <p
             onClick={handlelogout}
             style={{
               color: "black",
-              display: props.account,
+              display: props.logout,
               textDecoration: "underline",
             }}
           >
