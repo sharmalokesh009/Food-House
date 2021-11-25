@@ -5,6 +5,7 @@ import {  Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import LoadingIcon from "../Icons/Loading";
 import { backendurl } from "../url";
+import Footer from "./Footer"
 
 export default function Form(props) {
   axios.defaults.withCredentials = true;
@@ -386,6 +387,7 @@ export default function Form(props) {
             <LoadingIcon />
           )}
         </form>
+        <Footer/>
       </div>
     
   );

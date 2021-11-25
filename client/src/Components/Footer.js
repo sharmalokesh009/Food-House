@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function Footer(props) {
   return (
   
-      <div className="footer-container" style={{marginTop : props.margintop}}>
+      <div className="footer-container" style={{marginTop : props.margintop , width:"100%"}}>
         <div className="upper">
           <Link to="/terms" style={{color:props.color}}>Terms of Use</Link>
           <Link to="/privacy" style={{color:props.color}}>Privacy Policy</Link>

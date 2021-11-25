@@ -20,9 +20,11 @@ app.use(
     origin: [
       "http://localhost:3000",
       "http://localhost:3001",
+      "https://foodhouse-4fe42.web.app",
       "https://foodhouseweb.herokuapp.com",
       "https://foodhouseapp.herokuapp.com",
-      "https://fhadmin.herokuapp.com"
+      "https://fhadmin.herokuapp.com",
+      "https://fhadmin-7a723.web.app"
     ],
     methods: ["GET", "POST"],
     credentials: true,

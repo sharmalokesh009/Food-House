@@ -41,6 +41,9 @@ body {
     }
     .title {
       text-decoration: none;
+      &:hover{
+        cursor: context-menu;
+      }
     }
     .right-items {
       display: grid;

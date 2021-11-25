@@ -28,17 +28,18 @@ export default function Foodbycategory(props) {
       }
     });
   },[navigate]);
-  const fetchdata = async () => {
-    setdataparsed(true);
-    await axios.get(`${backendurl.url}${props.food}`).then((res) => {
-      setfoods(res.data);
-      setdataparsed(false);
-    });
-  };
+  
 
   useEffect(() => {
+    const fetchdata = async () => {
+      setdataparsed(true);
+      await axios.get(`${backendurl.url}${props.food}`).then((res) => {
+        setfoods(res.data);
+        setdataparsed(false);
+      });
+    }
     fetchdata();
-  }, []);
+  }, [props.food]);
 
   const handleaddtocart = (index) => {
     document.getElementById(`${index}itemcount`).style.display = "";

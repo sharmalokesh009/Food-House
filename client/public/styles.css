@@ -60,6 +60,10 @@ body {
   text-decoration: none;
 }
 
+.navbar-container .navbar .title:hover {
+  cursor: context-menu;
+}
+
 .navbar-container .navbar .right-items {
   display: -ms-grid;
   display: grid;
