@@ -1,5 +1,4 @@
-$primaryfont: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-  Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+$primaryfont: "Poppins", sans-serif;
 $primarycolor: #e7a422;
 * {
   margin: 0;
@@ -41,7 +40,7 @@ body {
     }
     .title {
       text-decoration: none;
-      &:hover{
+      &:hover {
         cursor: context-menu;
       }
     }
@@ -50,6 +49,12 @@ body {
       grid-template-columns: auto auto auto auto;
       justify-content: center;
       column-gap: 50px;
+      a{
+        transition: .3s;
+        &:hover{
+          color: $primarycolor;
+        }
+      }
     }
   }
   .mobile {
@@ -119,6 +124,13 @@ body {
     input::-webkit-inner-spin-button {
       -webkit-appearance: none;
     }
+    ::-webkit-input-placeholder {
+      opacity: 1;
+      transition: 0.3s;
+    }
+    input:focus::-webkit-input-placeholder {
+      opacity: 0;
+    }
     .inputs {
       display: flex;
       flex-direction: column;
@@ -127,17 +139,18 @@ body {
       margin-top: 7px;
 
       input {
-        padding: 7px;
+        padding: 10px;
         margin-bottom: 10px;
         border: 1px solid $primarycolor;
         background-color: black;
         border-radius: 2px;
         color: white;
         font-family: $primaryfont;
-        font-weight: bolder;
+     
         text-align: center;
         width: 250px;
         outline: none;
+        letter-spacing: 1px;
       }
       .phonenumber {
         display: grid;
@@ -157,15 +170,20 @@ body {
       }
     }
     button {
-      padding: 5px;
+      padding: 7px;
       font-family: $primaryfont;
       font-weight: bold;
-      color: white;
-      border-radius: 5px;
+      color: black;
+      border-radius: 2px;
       outline: none;
-      background-color: black;
+      background-color: $primarycolor;
       border: 3px solid $primarycolor;
+      width: 150px;
+      transition: .3s;
+      font-size: 15px;
       &:hover {
+        font-size: 15.5px;
+        color: white;
         cursor: pointer;
       }
     }
@@ -198,7 +216,7 @@ body {
       border: 2px solid black;
       color: black;
       font-size: 16px;
-
+      font-family: $primaryfont;
       text-align: center;
     }
 
@@ -207,7 +225,7 @@ body {
       background-color: black;
       color: $primarycolor;
       font-size: 14px;
-
+      font-family: $primaryfont;
       border: none;
       border-radius: 4px;
     }
@@ -389,18 +407,24 @@ body {
   align-items: center;
   .food-title {
     text-align: center;
+    font-weight: bold;
     font-size: 40px;
   }
   .burgers {
     margin-top: 20px;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
+    flex-wrap: wrap;
+    display: flex;
     justify-content: center;
     column-gap: 100px;
     row-gap: 100px;
+    width: 100%;
     .burger {
-      width: 150px;
+      width: auto;
       height: 100px;
+      display: flex;
+      column-gap: 10px;
+      justify-content: space-between;
+      align-items: center;
       img {
         border-radius: 5px;
         width: 150px;
@@ -408,7 +432,8 @@ body {
       }
       .burger-detail-addtocart {
         display: flex;
-        justify-content: space-between;
+        align-items: center;
+        justify-content: center;
         .burger-detail {
           .title {
             height: 50px;
@@ -418,11 +443,14 @@ body {
         .addtocart {
           display: grid;
           grid-template-columns: auto;
-          .carticon {
+          span{
+            color: $primarycolor;
+            font-size: 27px;
             &:hover {
               fill: #b98214;
             }
           }
+          
           div {
             input {
               width: 22px;
@@ -688,55 +716,52 @@ body {
   }
   .track-line {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     background-color: $primarycolor;
     width: 900px;
     height: 3.5px;
-    .order-received{
+    .order-received {
       text-align: left;
       margin-top: 10px;
     }
-    .order-delivered{
+    .order-delivered {
       text-align: right;
       margin-top: 10px;
     }
   }
-  .current-track-line{
+  .current-track-line {
     width: 900px;
     height: 5px;
-    div{
-      
+    div {
       height: 4px;
       background-color: rgb(46, 168, 46);
-      
     }
-    p{
+    p {
       text-align: right;
     }
-    .currentlocation-icon{
+    .currentlocation-icon {
       fill: rgb(214, 52, 52);
       animation: currenticonanimation 1s linear infinite;
       @keyframes currenticonanimation {
-        0%{
+        0% {
           transform: scale(1);
-          fill:rgb(230, 81, 81) ;
+          fill: rgb(230, 81, 81);
         }
-        50%{
+        50% {
           transform: scale(1.3);
-          fill:rgb(255, 0, 0) ;
+          fill: rgb(255, 0, 0);
         }
-        100%{
+        100% {
           transform: scale(1);
-          fill:rgb(214, 52, 52) ;
+          fill: rgb(214, 52, 52);
         }
       }
     }
   }
-  h3{
+  h3 {
     margin-top: 50px;
     color: rgb(209, 12, 12);
   }
-  
 }
 
 @media only screen and (max-width: 1000px) {
@@ -825,17 +850,16 @@ body {
     }
   }
   .home-container {
-  
     .categories-container {
       grid-template-columns: auto auto;
       margin-top: 0px;
       column-gap: 15px;
       row-gap: 30px;
       position: relative;
-      div{
+      div {
         width: 150px;
         height: 150px;
-        img{
+        img {
           width: 150px;
           height: 150px;
         }
@@ -859,5 +883,4 @@ body {
       }
     }
   }
-
 }

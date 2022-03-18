@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: black;
 }
 
@@ -74,6 +74,15 @@ body {
           justify-content: center;
   -webkit-column-gap: 50px;
           column-gap: 50px;
+}
+
+.navbar-container .navbar .right-items a {
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.navbar-container .navbar .right-items a:hover {
+  color: #e7a422;
 }
 
 .navbar-container .mobile {
@@ -190,6 +199,16 @@ body {
   -webkit-appearance: none;
 }
 
+.form-container form ::-webkit-input-placeholder {
+  opacity: 1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.form-container form input:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+
 .form-container form .inputs {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -208,17 +227,17 @@ body {
 }
 
 .form-container form .inputs input {
-  padding: 7px;
+  padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #e7a422;
   background-color: black;
   border-radius: 2px;
   color: white;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: bolder;
+  font-family: "Poppins", sans-serif;
   text-align: center;
   width: 250px;
   outline: none;
+  letter-spacing: 1px;
 }
 
 .form-container form .inputs .phonenumber {
@@ -243,17 +262,23 @@ body {
 }
 
 .form-container form button {
-  padding: 5px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 7px;
+  font-family: "Poppins", sans-serif;
   font-weight: bold;
-  color: white;
-  border-radius: 5px;
+  color: black;
+  border-radius: 2px;
   outline: none;
-  background-color: black;
+  background-color: #e7a422;
   border: 3px solid #e7a422;
+  width: 150px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  font-size: 15px;
 }
 
 .form-container form button:hover {
+  font-size: 15.5px;
+  color: white;
   cursor: pointer;
 }
 
@@ -307,6 +332,7 @@ body {
   border: 2px solid black;
   color: black;
   font-size: 16px;
+  font-family: "Poppins", sans-serif;
   text-align: center;
 }
 
@@ -315,6 +341,7 @@ body {
   background-color: black;
   color: #e7a422;
   font-size: 14px;
+  font-family: "Poppins", sans-serif;
   border: none;
   border-radius: 4px;
 }
@@ -566,26 +593,40 @@ body {
 
 .foodbycategory-container .food-title {
   text-align: center;
+  font-weight: bold;
   font-size: 40px;
 }
 
 .foodbycategory-container .burgers {
   margin-top: 20px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: auto auto auto auto;
-      grid-template-columns: auto auto auto auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-column-gap: 100px;
           column-gap: 100px;
   row-gap: 100px;
+  width: 100%;
 }
 
 .foodbycategory-container .burgers .burger {
-  width: 150px;
+  width: auto;
   height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .foodbycategory-container .burgers .burger img {
@@ -598,9 +639,12 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .foodbycategory-container .burgers .burger .burger-detail-addtocart .burger-detail .title {
@@ -615,7 +659,12 @@ body {
       grid-template-columns: auto;
 }
 
-.foodbycategory-container .burgers .burger .burger-detail-addtocart .addtocart .carticon:hover {
+.foodbycategory-container .burgers .burger .burger-detail-addtocart .addtocart span {
+  color: #e7a422;
+  font-size: 27px;
+}
+
+.foodbycategory-container .burgers .burger .burger-detail-addtocart .addtocart span:hover {
   fill: #b98214;
 }
 
@@ -625,7 +674,7 @@ body {
   font-weight: bolder;
   font-size: 16px;
   outline: none;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .foodbycategory-container .burgers .burger .burger-detail-addtocart .addtocart div input[type="number"]::-webkit-outer-spin-button,
@@ -884,7 +933,7 @@ body {
 .orderplaced-container .orderplaced p {
   text-align: center;
   font-size: 40px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: bold;
 }
 
@@ -944,7 +993,7 @@ body {
 }
 
 .orderplaced-container .order-details p {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Poppins", sans-serif;
   text-align: center;
   font-weight: bold;
 }
@@ -972,7 +1021,7 @@ body {
 .orderplaced-container .order-details a {
   margin-top: 50px;
   text-align: center;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: bold;
   color: green;
 }

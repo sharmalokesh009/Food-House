@@ -1,7 +1,5 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import Addtocart from "../Icons/Addtocart";
-import Removecart from "../Icons/Removecart";
 import Navbar from "./Navbar";
 import {  useNavigate } from "react-router-dom";
 import LoadingIcon from "../Icons/Loading";
@@ -121,7 +119,9 @@ export default function Foodbycategory(props) {
                         }}
                         id={`${index}addtocart`}
                       >
-                        <Addtocart />
+                        <span className="material-icons">
+                        add_circle
+</span>
                       </p>
 
                       <div>
@@ -145,7 +145,9 @@ export default function Foodbycategory(props) {
                             handleremovecart(index);
                           }}
                         >
-                          <Removecart />
+                          <span class="material-icons">
+remove_circle
+</span>
                         </p>
                       </div>
                     </div>

@@ -5,6 +5,7 @@ import Navbar from "./Navbar";
 import {  Link } from "react-router-dom";
 import dotenv from "dotenv"
 import { backendurl } from "../url";
+import Footer from "./Footer";
 
 export default function Home() {
   dotenv.config();
@@ -80,6 +81,7 @@ export default function Home() {
             <Link to="/drinks">DRINKS</Link>
           </div>
         </div>
+        <Footer color="black" margintop="100px"/>
       </div>
     
   );

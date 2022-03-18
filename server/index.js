@@ -24,7 +24,8 @@ app.use(
       "https://foodhouseweb.herokuapp.com",
       "https://foodhouseapp.herokuapp.com",
       "https://fhadmin.herokuapp.com",
-      "https://fhadmin-7a723.web.app"
+      "https://fhadmin-7a723.web.app",
+      "https://foodhousefh.netlify.app"
     ],
     methods: ["GET", "POST"],
     credentials: true,
@@ -397,6 +398,10 @@ app.post('/razorpay', async (req, res) => {
 		console.log(error)
 	}
 })
+
+
+
+
 
 app.post('/todayorders' , (req,res) => {
   
